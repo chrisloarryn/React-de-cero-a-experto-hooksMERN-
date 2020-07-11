@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import './index.module.css'
-import FirstApp from './FirstApp'
+// import FirstApp from './FirstApp'
 import CounterApp from './CounterApp'
 
 const rootDiv = document.querySelector('#root')

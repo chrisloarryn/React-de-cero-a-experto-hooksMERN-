@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 // Functional Component
-const FirstApp = ({ message, subtitle }) => {
-  console.log(message)
+const FirstApp = ({ message, subtitle = 'My first App' }) => {
+  // console.log(message)
 
   // A LOT OF MEMORY
   // if (!message) {
@@ -25,8 +25,7 @@ const FirstApp = ({ message, subtitle }) => {
 }
 
 FirstApp.propTypes = {
-  message: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
+  message: PropTypes.string.isRequired
 }
 FirstApp.defaultProps = {
   subtitle: `I'm a subtitle`,

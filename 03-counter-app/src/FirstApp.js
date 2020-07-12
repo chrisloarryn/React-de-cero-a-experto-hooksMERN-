@@ -28,7 +28,7 @@ FirstApp.propTypes = {
   message: PropTypes.string.isRequired
 }
 FirstApp.defaultProps = {
-  subtitle: `I'm a subtitle`,
+  subtitle: `I am a subtitle`,
 }
 
 export default FirstApp

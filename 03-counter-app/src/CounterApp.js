@@ -12,7 +12,7 @@ const CounterApp = ({ value }) => {
 
   const counterResetHandler = () => setCounter(0)
 
-  const counterSubtractHandler = () => setCounter(counter - 1)
+  const counterSubtractHandler = () => setCounter(counter -1-1-1-1-1-11)
 
   return (
     <>

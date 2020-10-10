@@ -6,6 +6,9 @@ import ReactDOM from 'react-dom'
 
 // import { SimpleForm } from "./components/02-useEffect/SimpleForm";
 // import { FormWithCustomHook } from './components/02-useEffect/FormWithCustomHook'
-import { MultipleCustomsHooks } from './components/03-examples/MultipleCustomsHooks'
+// import { MultipleCustomsHooks } from './components/03-examples/MultipleCustomsHooks'
+// import { FocusScreen } from './components/04-useRef/FocusScreen'
+// import { RealExampleRef } from './components/04-useRef/RealExampleRef'
+import { Layout } from './components/05-useLayoutEffect/Layout'
 
-ReactDOM.render(<MultipleCustomsHooks />, document.getElementById('root'))
+ReactDOM.render(<Layout />, document.getElementById('root'))

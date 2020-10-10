@@ -1,6 +1,4 @@
-
-
-const activo = true;
+const activo = true
 
 // let mensaje = '';
 
@@ -9,11 +7,8 @@ const activo = true;
 // } else {
 //     mensaje = 'Inactivo';
 // }
-// const mensaje = ( activo ) ? 'Activo' : 'Inactivo'; 
-// const mensaje = ( activo ) ? 'Activo' : null; 
-const mensaje = activo && 'Activo';
+// const mensaje = ( activo ) ? 'Activo' : 'Inactivo';
+// const mensaje = ( activo ) ? 'Activo' : null;
+const mensaje = activo && 'Activo'
 
-
-console.log(mensaje);
-
-
+console.log(mensaje)

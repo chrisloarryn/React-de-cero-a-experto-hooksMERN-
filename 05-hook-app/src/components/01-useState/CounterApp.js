@@ -11,19 +11,18 @@ export const CounterApp = () => {
   const { counter1, counter2 } = state
   return (
     <>
-      <h3> Counter1 { counter1 } </h3>
-      <h3> Counter2 { counter2 } </h3>
+      <h3> Counter1 {counter1} </h3>
+      <h3> Counter2 {counter2} </h3>
       <hr />
 
-      <button 
+      <button
         className="btn btn-primary"
-        onClick={ () => {
+        onClick={() => {
           setState({
             ...state,
-            counter1: counter1 + 1
+            counter1: counter1 + 1,
           })
-        }}  
-      >
+        }}>
         +1
       </button>
     </>

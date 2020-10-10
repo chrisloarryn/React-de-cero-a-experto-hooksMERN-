@@ -1,34 +1,34 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react'
 import { Message } from './Message'
 
-import "./effects.css";
+import './effects.css'
 
 export const SimpleForm = () => {
   const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-  });
+    name: '',
+    email: '',
+  })
 
-  const { name, email } = formState;
+  const { name, email } = formState
 
   useEffect(() => {
     // console.log(`hey`);
-  }, []);
+  }, [])
 
   useEffect(() => {
     // console.log(`formState cambio`);
-  }, [formState]);
+  }, [formState])
 
   useEffect(() => {
     // console.log(`email cambio`);
-  }, [email]);
+  }, [email])
 
   const handleInputChange = ({ target }) => {
     setFormState({
       ...formState,
       [target.name]: target.value,
-    });
-  };
+    })
+  }
   return (
     <>
       <h1>useEffect</h1>
@@ -56,9 +56,7 @@ export const SimpleForm = () => {
         />
       </div>
 
-      {name && name === '123' && (
-        <Message />
-      )}
+      {name && name === '123' && <Message />}
     </>
-  );
-};
+  )
+}

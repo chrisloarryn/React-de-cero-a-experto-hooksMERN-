@@ -9,6 +9,10 @@ import ReactDOM from 'react-dom'
 // import { MultipleCustomsHooks } from './components/03-examples/MultipleCustomsHooks'
 // import { FocusScreen } from './components/04-useRef/FocusScreen'
 // import { RealExampleRef } from './components/04-useRef/RealExampleRef'
-import { Layout } from './components/05-useLayoutEffect/Layout'
+// import { Layout } from './components/05-useLayoutEffect/Layout'
+// import { Memorize } from './components/06-memos/Memorize'
+// import { MemoHook } from './components/06-memos/MemoHook'
+// import { CallbackHook } from './components/06-memos/CallbackHook'
+import { Father } from './components/07-task-memo/Father'
 
-ReactDOM.render(<Layout />, document.getElementById('root'))
+ReactDOM.render(<Father />, document.getElementById('root'))

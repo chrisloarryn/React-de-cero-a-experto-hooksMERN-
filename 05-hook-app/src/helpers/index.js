@@ -1,0 +1,1 @@
+export { strongProcess } from './strongProcess'

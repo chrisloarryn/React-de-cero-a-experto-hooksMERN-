@@ -5,7 +5,7 @@ export const useFetch = url => {
   const [state, setState] = useState({
     data: null,
     loading: true,
-    error: null,
+    error: null
   })
   useEffect(() => {
     return () => {
@@ -22,10 +22,17 @@ export const useFetch = url => {
             setState({
               loading: false,
               error: null,
-              data,
+              data
             })
           else console.log('setState() did not called')
         }, 1000)
+      })
+      .catch(() => {
+        setState({
+          data: null,
+          loading: false,
+          error: 'data has not been charged'
+        })
       })
   }, [url])
 

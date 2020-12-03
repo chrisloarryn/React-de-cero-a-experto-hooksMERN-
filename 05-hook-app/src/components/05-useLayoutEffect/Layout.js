@@ -8,7 +8,7 @@ export const Layout = () => {
   const { counter, increment } = useCounter(1)
   const [boxSize, setBoxSize] = useState({})
   const { data } = useFetch(
-    `https://www.breakingbadapi.com/api/quotes/${counter}`,
+    `https://www.breakingbadapi.com/api/quotes/${counter}`
   )
   const { quote } = !!data && data[0]
   const paragraphTag = useRef()

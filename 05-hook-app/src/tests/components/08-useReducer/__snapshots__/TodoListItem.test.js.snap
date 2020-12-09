@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests in <TodoListItem /> Should be rendered correctly 1`] = `
+<li
+  className="list-group-item"
+  key="2"
+>
+  <p
+    className="false"
+    onClick={[Function]}
+  >
+    2 - Learn Mongo
+  </p>
+  <button
+    className="btn btn-danger"
+    onClick={[Function]}
+  >
+    Delete
+  </button>
+</li>
+`;

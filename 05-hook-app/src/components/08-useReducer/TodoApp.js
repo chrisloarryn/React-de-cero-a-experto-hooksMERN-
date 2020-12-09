@@ -3,7 +3,7 @@ import { todoReducer } from './todoReducer'
 
 import './styles.css'
 import { TodoList } from './components/TodoList'
-import { TodoAdd } from './components/TodoAdd'
+import { TodoAdd } from './TodoAdd'
 
 const init = () => JSON.parse(localStorage.getItem('todos')) || []
 
@@ -18,7 +18,7 @@ export const TodoApp = () => {
     // create action
     const action = {
       type: 'DEL',
-      payload: todoId,
+      payload: todoId
     }
     // dispatch
     dispatch(action)
@@ -29,17 +29,13 @@ export const TodoApp = () => {
 
   return (
     <div>
-      <h1>TodoApp ( {(todos && todos.length) || 0} )</h1>
+      <h1>TodoApp ( {;(todos && todos.length) || 0} )</h1>
       <hr />
-      <div className="row">
-        <div className="col-7">
-          <TodoList
-            todos={todos}
-            handleDelete={handleDelete}
-            handleToggle={handleToggle}
-          />
+      <div className='row'>
+        <div className='col-7'>
+          <TodoList todos={todos} handleDelete={handleDelete} handleToggle={handleToggle} />
         </div>
-        <div className="col-5">
+        <div className='col-5'>
           <TodoAdd handleAddTodo={handleAddTodo} />
         </div>
       </div>

@@ -7,7 +7,7 @@ import { UserContext } from 'components/09-useContext/UserContext'
 describe('Tests in <LoginScreen />', () => {
   const user = {
     name: 'Christopher',
-    email: 'christopher@gmail.com'
+    email: 'christophere@gmail.com'
   }
   const setUser = jest.fn()
   const wrapper = mount(

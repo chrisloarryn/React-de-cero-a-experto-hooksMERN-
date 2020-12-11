@@ -16,9 +16,8 @@ export const LoginScreen = () => {
         className="btn btn-primary"
         onClick={() =>
           setUser({
-            id: new Date().getTime(),
-            name: 'namdsssde',
-            date: new Date(),
+            id: 234,
+            name: 'namdsssde'
           })
         }>
         Login

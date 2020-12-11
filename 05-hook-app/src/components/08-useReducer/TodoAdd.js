@@ -4,9 +4,8 @@ import { useForm } from 'hooks/useForm'
 
 export const TodoAdd = ({ handleAddTodo }) => {
   const [{ description }, handleInputChange, reset] = useForm({
-    description: '',
+    description: ''
   })
-  console.log('description', description)
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -14,7 +13,7 @@ export const TodoAdd = ({ handleAddTodo }) => {
     const newTodo = {
       id: new Date().getTime(),
       desc: description,
-      done: false,
+      done: false
     }
     handleAddTodo(newTodo)
     reset()

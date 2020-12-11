@@ -1,7 +1,5 @@
 import React from 'react'
-import { todoReducer } from './../../../components/08-useReducer/todoReducer'
 import { demoTodos } from './../fixtures/demoTodos'
-import * as actions from './../../../helpers/actions'
 import { shallow } from 'enzyme'
 import { TodoListItem } from 'components/08-useReducer/TodoListItem'
 import '@testing-library/jest-dom'

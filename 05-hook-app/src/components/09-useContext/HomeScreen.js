@@ -5,7 +5,6 @@ export const HomeScreen = () => {
   // ref to context
   const userContext = useContext(UserContext)
   const { user } = userContext
-  console.log('ddd', user.id)
   return (
     <div>
       <h1>HomeScreen {`${user?.id || 'PLEASE'} ${user?.name || 'LOGIN'}`}</h1>

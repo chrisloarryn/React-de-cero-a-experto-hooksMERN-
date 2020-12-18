@@ -4,8 +4,20 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import { MarvelScreen } from '../components/marvel/MarvelScreen';
 import { HeroScreen } from '../components/heroes/HeroScreen';
 import { DcScreen } from '../components/dc/DcScreen';
+import { SearchScreen } from '../components/search/SearchScreen';
+// import { AuthContext } from '../auth/AuthContext';
 
-export const DashboardRoutes = () => {
+export const DashboardRoutes = ({ history }) => {
+  // const { user } = useContext(AuthContext);
+  // const redirectToPath = useCallback(() => () => history.replace('/login'), [
+  //   history,
+  //   user
+  // ])
+  // useEffect(() => {
+  //   Object.keys(user).length > 0 && user.logged === false && redirectToPath()
+  //   // eslint-disable-next-line
+  // }, [user])
+
   return (
     <>
       <Navbar />
@@ -14,6 +26,7 @@ export const DashboardRoutes = () => {
           <Route exact path='/marvel' component={MarvelScreen} />
           <Route exact path='/hero/:heroId' component={HeroScreen} />
           <Route exact path='/dc' component={DcScreen} />
+          <Route exact path='/search' component={SearchScreen} />
           <Redirect to='/marvel' />
         </Switch>
       </div>

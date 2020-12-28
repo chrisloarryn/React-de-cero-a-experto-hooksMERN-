@@ -13,9 +13,9 @@ export const JournalEntry = () => {
       ></div>
 
       <div className='journal__entry-body'>
-        <p className='journal__entry-title'>Un nuevo día</p>
+        <p className='journal__entry-title'>A New Day</p>
         <p className='journal__entry-content'>
-          Reprehenderit id in duis consectetur deserunt veniam fugiat.
+          Pariatur tempor elit veniam sunt aliquip.
         </p>
       </div>
 

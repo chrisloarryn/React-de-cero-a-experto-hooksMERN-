@@ -5,6 +5,7 @@ import 'firebase/auth';
 export const firebaseConfig = {
   apiKey: 'AIzaSyC3KN-DHa1rIaK_CKjW84PPyLZEy0_FmDE',
   authDomain: 'react-redux-app-a1af4.firebaseapp.com',
+  databaseURL: 'https://react-redux-app-a1af4-default-rtdb.firebaseio.com',
   projectId: 'react-redux-app-a1af4',
   storageBucket: 'react-redux-app-a1af4.appspot.com',
   messagingSenderId: '548731380173',
@@ -14,6 +15,6 @@ export const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const db = firebase.firestore();
-const googleAuthProvider = new firebase.auth.GithubAuthProvider();
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider(); // GithubAuthProvider();
 
 export { db, googleAuthProvider, firebase };

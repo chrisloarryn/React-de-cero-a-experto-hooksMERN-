@@ -1,11 +1,14 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { startGoogleLogin, startLoginEmailPassword } from '../../actions/auth';
 import { useForm } from '../../hooks/useForm';
 
 export const LoginScreen = () => {
+  const { loading } = useSelector((state) => state.ui);
+  console.log(loading);
   const dispatch = useDispatch();
+  // eslint-disable-next-line
   const [formValues, handleInputChange] = useForm({
     email: 'nando@gmail.com',
     password: '123456'
@@ -41,7 +44,11 @@ export const LoginScreen = () => {
           value={password}
         />
 
-        <button type='submit' className='btn btn-primary btn-block'>
+        <button
+          disabled={loading}
+          type='submit'
+          className='btn btn-primary btn-block'
+        >
           Login
         </button>
 

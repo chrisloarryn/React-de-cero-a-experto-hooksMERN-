@@ -30,6 +30,18 @@
   }
 }
 
+.btn-danger {
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background-color: tomato;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($color: tomato, $amount: 10);
+  }
+}
+
 .btn-block {
   width: 100%;
 }

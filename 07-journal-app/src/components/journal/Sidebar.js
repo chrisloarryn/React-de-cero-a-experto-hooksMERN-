@@ -18,15 +18,24 @@ export const Sidebar = () => {
       <div className='journal__sidebar-navbar'>
         <h3 className='mt-5'>
           <i className='far fa-moon'></i>
-          <span> {name}</span>
+          <span className='animate__animated animate__fadeIn animate__faster'>
+            {' '}
+            {name}
+          </span>
         </h3>
 
-        <button className='btn' onClick={handleLogout}>
+        <button
+          className='btn animate__animated animate__fadeIn animate__faster'
+          onClick={handleLogout}
+        >
           Logout
         </button>
       </div>
 
-      <div className='journal__new-entry' onClick={handleAddNew}>
+      <div
+        className='journal__new-entry animate__animated animate__fadeIn animate__faster'
+        onClick={handleAddNew}
+      >
         <i className='far fa-calendar-plus fa-5x'></i>
         <p className='mt-5'>New entry</p>
       </div>

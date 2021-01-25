@@ -33,7 +33,7 @@ export const LoginScreen = () => {
           name='email'
           className='auth__input'
           autoComplete='off'
-          value={email}
+          defaultValue={email}
         />
 
         <input
@@ -41,7 +41,7 @@ export const LoginScreen = () => {
           placeholder='Password'
           name='password'
           className='auth__input'
-          value={password}
+          defaultValue={password}
         />
 
         <button

@@ -13,14 +13,17 @@ export const startNewNote = () => {
       body: '',
       date: new Date().getTime()
     };
-    const doc = await db.collection(`${uid}/journal/notes`).add(newNote);
-    dispatch(activeNote(doc.id, newNote));
-    dispatch(addNewNote(doc.id, newNote));
+    try {
+      const doc = await db.collection(`${uid}/journal/notes`).add(newNote);
+      dispatch(activeNote(doc.id, newNote));
+      dispatch(addNewNote(doc.id, newNote));
+    } catch (err) {
+      console.log(err);
+    }
   };
 };
 
 export const activeNote = (id, note) => {
-  console.log(id, note);
   return {
     type: types.NOTES_ACTIVE,
     payload: {
@@ -113,9 +116,12 @@ export const startUploading = (file) => {
       showConfirmButton: false,
       showCancelButton: false,
       allowOutsideClick: false,
-      onBeforeOpen: () => {
+      willOpen: () => {
         Swal.showLoading();
       }
+      /* onBeforeOpen: () => {
+        Swal.showLoading();
+      } */
     });
     const fileUrl = await fileUpload(file);
     activeNote.url = fileUrl;

@@ -15,14 +15,14 @@ exports[`Tests in <LoginScreen /> <LoginScreen /> match with snapshot 1`] = `
     <input
       autoComplete="off"
       className="auth__input"
-      defaultValue="nando@gmail.com"
+      defaultValue=""
       name="email"
       placeholder="Email"
       type="text"
     />
     <input
       className="auth__input"
-      defaultValue="123456"
+      defaultValue=""
       name="password"
       placeholder="Password"
       type="password"

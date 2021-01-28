@@ -1,5 +1,5 @@
-import '@testing-library/jest-dom';
-import { types } from '../../types/types';
+import '@testing-library/jest-dom'
+import { types } from '../../types/types'
 
 describe('tests with types', () => {
   test('should have these types', () => {
@@ -19,6 +19,6 @@ describe('tests with types', () => {
       NOTES_FILE_URL: '[Notes] Updated Image Url',
       NOTES_DELETE: '[Notes] Delete Note',
       NOTES_LOGOUT_CLEANING: '[Notes] Logout Cleaning'
-    });
-  });
-});
+    })
+  })
+})

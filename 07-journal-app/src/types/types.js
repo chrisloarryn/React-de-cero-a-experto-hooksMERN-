@@ -14,4 +14,4 @@ export const types = {
   NOTES_FILE_URL: '[Notes] Updated Image Url',
   NOTES_DELETE: '[Notes] Delete Note',
   NOTES_LOGOUT_CLEANING: '[Notes] Logout Cleaning'
-};
+}

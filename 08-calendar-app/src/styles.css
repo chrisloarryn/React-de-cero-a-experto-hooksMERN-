@@ -8,3 +8,7 @@ html, body {
   flex-flow: column;
   height: 100vh;
 }
+
+.rbc-calendar {
+  height: 100vh;
+}

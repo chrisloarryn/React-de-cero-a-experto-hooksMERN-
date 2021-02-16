@@ -5,6 +5,7 @@ import moment from 'moment'
 import { Navbar } from '../UI/Navbar'
 import { messages } from '../../Helpers/calendar-messages-es'
 import { CalendarEvent } from './CalendarEvent'
+import { CalendarModal } from './CalendarModal'
 
 import 'moment/locale/es'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
@@ -19,7 +20,7 @@ const events = [
     start: moment().toDate(),
     end: moment().add(2, 'hours').toDate(),
     bgcolor: '#fafa',
-    notes: 'Buy pankakes',
+    notes: 'Buy pancakes',
     user: {
       _id: '123',
       name: 'chrisloarryn'
@@ -67,6 +68,7 @@ export const CalendarScreen = () => {
           event: CalendarEvent
         }}
       />
+      <CalendarModal />
     </div>
   )
 }

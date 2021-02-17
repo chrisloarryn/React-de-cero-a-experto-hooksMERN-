@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import ReactDOM from 'react-dom'
+// import ReactDOM from 'react-dom'
 import Modal from 'react-modal'
 import DateTimePicker from 'react-datetime-picker'
 import moment from 'moment'
@@ -17,15 +17,17 @@ const customStyles = {
 
 Modal.setAppElement('#root')
 
-const startDate = moment().minutes(0).seconds(0).add(1, 'hours')
+const now = moment().minutes(0).seconds(0).add(1, 'hours')
+const nowPlus1 = now.clone().add(1, 'hours')
 
 export const CalendarModal = () => {
+  const [dateStart, setDateStart] = useState(now.toDate())
+  const [dateEnd, setDateEnd] = useState(nowPlus1.toDate())
   const closeModal = () => {
     console.log('closing...')
   }
-  const handleStartDateChange = (e) => {
-    console.log(e)
-  }
+  const handleStartDateChange = (e) => setDateStart(e)
+  const handleEndDateChange = (e) => setDateEnd(e)
   return (
     <div>
       <Modal
@@ -33,7 +35,7 @@ export const CalendarModal = () => {
         /* onAfterOpen={afterOpenModal} */
         onRequestClose={closeModal}
         style={customStyles}
-        closeTimeoutMS='200'
+        closeTimeoutMS={200}
         className='modal'
         overlayClassName='modal-fondo'
       >
@@ -44,7 +46,7 @@ export const CalendarModal = () => {
             <label>Fecha y hora inicio</label>
             <DateTimePicker
               onChange={handleStartDateChange}
-              value={startDate.toDate()}
+              value={dateStart}
               className='form-control'
               placeholder='Fecha inicio'
             />
@@ -52,7 +54,13 @@ export const CalendarModal = () => {
 
           <div className='form-group'>
             <label>Fecha y hora fin</label>
-            <input className='form-control' placeholder='Fecha inicio' />
+            <DateTimePicker
+              onChange={handleEndDateChange}
+              value={dateEnd}
+              minDate={dateStart}
+              className='form-control'
+              placeholder='Fecha término'
+            />
           </div>
 
           <hr />

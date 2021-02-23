@@ -1,16 +1,23 @@
-const express = require('express')
+/**
+ * Users Routes / Auth routes
+ * host + /api/auth
+ */
 
+const express = require('express')
+require('dotenv').config('./env')
 const port = process.env.PORT || 5000
 
 // Create express server instance
 const app = express()
 
+// Public directory
+app.use(express.static('public'))
+
+// Read and parse response body
+app.use(express.json())
+
 // Routes
-app.get('/', (req, res) => {
-  res.json({
-    ok: true
-  })
-})
+app.use('/api/auth', require('./routes/auth'))
 
 // Listen request
 app.listen(port, () => {

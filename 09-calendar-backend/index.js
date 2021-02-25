@@ -5,6 +5,7 @@
 
 const express = require('express')
 require('dotenv').config('./env')
+const cors = require('cors')
 const { dbConnection } = require('./database/config')
 
 const port = process.env.PORT || 5000
@@ -15,6 +16,9 @@ const app = express()
 // DB
 dbConnection()
 
+// CORS
+app.use(cors())
+
 // Public directory
 app.use(express.static('public'))
 
@@ -23,6 +27,7 @@ app.use(express.json())
 
 // Routes
 app.use('/api/auth', require('./routes/auth'))
+app.use('/api/events', require('./routes/events'))
 
 // Listen request
 app.listen(port, () => {

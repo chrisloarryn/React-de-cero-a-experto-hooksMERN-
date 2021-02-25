@@ -5,10 +5,15 @@
 
 const express = require('express')
 require('dotenv').config('./env')
+const { dbConnection } = require('./database/config')
+
 const port = process.env.PORT || 5000
 
 // Create express server instance
 const app = express()
+
+// DB
+dbConnection()
 
 // Public directory
 app.use(express.static('public'))

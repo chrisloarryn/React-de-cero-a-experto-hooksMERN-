@@ -20,7 +20,7 @@ const createEvent = async (req, res = response) => {
 const readEvent = async (req, res = response) => {
   const events = await Event.find().populate({
     path: 'user',
-    select: '-password -__v'
+    select: '-password -__v -email'
   })
   return res.status(200).json({
     ok: true,
@@ -53,6 +53,9 @@ const updateEvent = async (req, res = response) => {
     const updatedEvent = await Event.findByIdAndUpdate(eventId, newEvent, {
       new: true,
       runValidators: true
+    }).populate({
+      path: 'user',
+      select: '-password -__v -email'
     })
     return res.json({
       ok: true,

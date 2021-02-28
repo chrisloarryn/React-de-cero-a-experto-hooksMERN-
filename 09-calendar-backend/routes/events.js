@@ -33,8 +33,8 @@ router.post(
       .trim()
       .escape()
       .withMessage('Name is required.'),
-    check('start').custom(isDate).withMessage('start date is not valid.'),
-    check('end').custom(isDate).withMessage('end date is not valid.'),
+    check('start').custom(isDate).withMessage('Start date is not valid.'),
+    check('end').custom(isDate).withMessage('End date is not valid.'),
     fieldsValidator
   ],
   createEvent

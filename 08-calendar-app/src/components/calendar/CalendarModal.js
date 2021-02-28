@@ -8,9 +8,9 @@ import Swal from 'sweetalert2'
 
 import { uiCloseModal } from '../../actions/ui'
 import {
-  eventAddNew,
+  eventStartAddNew,
   eventClearActiveEvent,
-  eventUpdated
+  eventStartUpdate
 } from '../../actions/events'
 
 const customStyles = {
@@ -23,7 +23,10 @@ const customStyles = {
     transform: 'translate(-50%, -50%)'
   }
 }
-Modal.setAppElement('#root')
+
+if (process.env.NODE_ENV !== 'test') {
+  Modal.setAppElement('#root')
+}
 
 const now = moment().minutes(0).seconds(0).add(1, 'hours') // 3:00:00
 const nowPlus1 = now.clone().add(1, 'hours')
@@ -64,7 +67,6 @@ export const CalendarModal = () => {
   }
 
   const closeModal = () => {
-    // TODO: cerrar el modal
     dispatch(uiCloseModal())
     dispatch(eventClearActiveEvent())
     setFormValues(initEvent)
@@ -105,18 +107,9 @@ export const CalendarModal = () => {
     }
 
     if (activeEvent) {
-      dispatch(eventUpdated(formValues))
+      dispatch(eventStartUpdate(formValues))
     } else {
-      dispatch(
-        eventAddNew({
-          ...formValues,
-          id: new Date().getTime(),
-          user: {
-            _id: '123',
-            name: 'Fernando'
-          }
-        })
-      )
+      dispatch(eventStartAddNew(formValues))
     }
 
     setTitleValid(true)
